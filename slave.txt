@@ -1,3 +1,0 @@
-kubectl cluster-info : 
-Dashboard: https://localhost:32000/
-Slave : jenkinsci/jnlp-slave
