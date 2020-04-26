@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    environment {
+        DOCKER_HOST = "192.168.50.1"
+    }
+    stages {
+        stage('Example') {
+            steps {
+                script {
+
+                docker.withTool("docker") { 
+                
+                    sh 'docker version'
+
+                }
+                }
+            }
+        }
+    }
+}
