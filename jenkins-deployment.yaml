@@ -5,6 +5,9 @@ metadata:
   namespace: cicd
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
   template:
     metadata:
       labels:
