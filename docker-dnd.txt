@@ -1,1 +1,3 @@
-docker container run --name docker  --detach   --privileged --network jenkins --network-alias docker   -e DOCKER_TLS_CERTDIR='' --publish 2376:2376 --publish 2375:2375 docker:dind
+docker run --name jenkins -e JAVA_OPTS=-Djenkins.install.runSetupWizard=false -p 8080:8080 -p 50000:50000 -d jenkins/jenkins
+
+docker container run --name docker  --detach   --privileged  -e DOCKER_TLS_CERTDIR='' --publish 2376:2376 --publish 2375:2375 docker:dind
